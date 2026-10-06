@@ -1,0 +1,60 @@
+VERSION="2.0.0"
+
+NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
+
+FEDERATION_SERVER="https://opiumbird-angels.github.io/OpiumBirdStellar/"
+
+[DOCUMENTATION]
+ORG_NAME="Opium Bird"
+ORG_URL="https://opiumbird-angels.github.io/OpiumBirdStellar/"
+ORG_DESCRIPTION="Opium Bird is a charitable digital asset project built on the Stellar network."
+
+[[CURRENCIES]]
+code="PLAGUE"
+issuer="GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65"
+name="PLAGUE"
+desc="PLAGUE is a charitable digital asset created to support fundraising efforts for children affected by cancer, individuals with autism, and people affected by plague and other serious infectious diseases."
+conditions="Charitable fundraising and humanitarian support."
+display_decimals=7
+is_asset_anchored=false
+image="https://opiumbird-angels.github.io/OpiumBirdStellar/9b74eea5-2bda-4e19-a79f-c67aaa7210b6.png"
+
+[[CURRENCIES]]
+code="CANCER"
+issuer="GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65"
+name="CANCER"
+desc="CANCER is a charitable digital asset created to support fundraising efforts for children and individuals affected by cancer."
+conditions="Charitable fundraising and humanitarian support."
+display_decimals=7
+is_asset_anchored=false
+image="https://opiumbird-angels.github.io/OpiumBirdStellar/9b74eea5-2bda-4e19-a79f-c67aaa7210b6.png"
+
+[[CURRENCIES]]
+code="AUTISM"
+issuer="GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65"
+name="AUTISM"
+desc="AUTISM is a charitable digital asset created to support fundraising efforts for individuals with autism and their families."
+conditions="Charitable fundraising and humanitarian support."
+display_decimals=7
+is_asset_anchored=false
+image="https://opiumbird-angels.github.io/OpiumBirdStellar/9b74eea5-2bda-4e19-a79f-c67aaa7210b6.png"
+
+[[CURRENCIES]]
+code="CHILDREN"
+issuer="GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65"
+name="CHILDREN"
+desc="CHILDREN is a charitable digital asset created to support humanitarian assistance and financial support for children in need."
+conditions="Charitable fundraising and humanitarian support."
+display_decimals=7
+is_asset_anchored=false
+image="https://opiumbird-angels.github.io/OpiumBirdStellar/9b74eea5-2bda-4e19-a79f-c67aaa7210b6.png"
+
+[[CURRENCIES]]
+code="OPIUMBIRD"
+issuer="GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65"
+name="OPIUMBIRD"
+desc="OPIUMBIRD is a digital asset within the Opium Bird project."
+conditions="No specific conditions."
+display_decimals=1
+is_asset_anchored=false
+image="https://opiumbird-angels.github.io/OpiumBirdStellar/9b74eea5-2bda-4e19-a79f-c67aaa7210b6.png"
