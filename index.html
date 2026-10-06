@@ -1,0 +1,1345 @@
+`html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Opium Bird | Humanity • Medicine • Hope</title>
+
+<meta name="description"
+content="Opium Bird is a humanitarian initiative built on the Stellar network, focused on supporting children affected by serious diseases and improving access to hope.">
+
+<meta name="theme-color" content="#07111c">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#050b12;
+    --bg2:#091522;
+    --panel:rgba(255,255,255,.045);
+    --panel2:rgba(255,255,255,.075);
+    --gold:#d7b56d;
+    --gold2:#f0d99a;
+    --text:#f5f7fa;
+    --muted:#9eabb9;
+    --line:rgba(255,255,255,.10);
+    --blue:#173c62;
+    --red:#8e2432;
+    --shadow:0 30px 90px rgba(0,0,0,.45);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+        radial-gradient(circle at 50% -10%,#193b5c 0%,transparent 36%),
+        var(--bg);
+    color:var(--text);
+    font-family:Inter,Arial,sans-serif;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* ================= NAV ================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(5,11,18,.78);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+}
+
+.nav{
+    height:76px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.18em;
+}
+
+.brand-symbol{
+    width:40px;
+    height:40px;
+    display:grid;
+    place-items:center;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    color:var(--gold);
+    font-size:20px;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:26px;
+}
+
+.menu a{
+    color:#b8c3ce;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    transition:.25s;
+}
+
+.menu a:hover{
+    color:var(--gold);
+}
+
+.language{
+    background:transparent;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    padding:8px 13px;
+    cursor:pointer;
+    border-radius:3px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    padding-top:80px;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    z-index:-2;
+    background:
+        linear-gradient(
+            rgba(3,8,14,.48),
+            rgba(3,8,14,.93)
+        ),
+        url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2200&q=85")
+        center/cover;
+}
+
+.hero-glow{
+    position:absolute;
+    width:700px;
+    height:700px;
+    border-radius:50%;
+    background:rgba(215,181,109,.08);
+    filter:blur(100px);
+    left:50%;
+    top:30%;
+    transform:translate(-50%,-50%);
+    z-index:-1;
+}
+
+.hero-content{
+    max-width:950px;
+    margin:auto;
+}
+
+.kicker{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.35em;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(58px,9vw,110px);
+    line-height:.95;
+    margin:22px 0 15px;
+}
+
+.hero-question{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(23px,4vw,42px);
+    color:#e6ebf0;
+    margin-bottom:25px;
+}
+
+.hero-copy{
+    max-width:720px;
+    margin:auto;
+    color:#c0ccd7;
+    font-size:16px;
+}
+
+.flags{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin:38px 0;
+}
+
+.flag{
+    width:58px;
+    height:39px;
+    object-fit:cover;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:4px;
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+}
+
+.hero-button{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:var(--gold);
+    color:#071019;
+    padding:14px 28px;
+    font-weight:800;
+    font-size:12px;
+    letter-spacing:.1em;
+    transition:.25s;
+}
+
+.hero-button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 45px rgba(215,181,109,.25);
+}
+
+/* ================= COMMON ================= */
+
+section{
+    padding:110px 0;
+}
+
+.label{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.title{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(35px,5vw,58px);
+    line-height:1.08;
+    margin-bottom:22px;
+}
+
+.subtitle{
+    color:var(--muted);
+    max-width:760px;
+}
+
+/* ================= MISSION ================= */
+
+.mission{
+    background:
+        linear-gradient(180deg,var(--bg),#07121f);
+}
+
+.mission-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:70px;
+    align-items:center;
+}
+
+.mission-card{
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:45px;
+    box-shadow:var(--shadow);
+}
+
+.mission-card p{
+    color:#bdc7d1;
+    margin-bottom:20px;
+}
+
+.gold{
+    color:var(--gold);
+}
+
+/* ================= STATISTICS ================= */
+
+.stats-section{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:50px;
+}
+
+.stat{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:32px;
+    border-radius:7px;
+}
+
+.stat-number{
+    color:var(--gold);
+    font-size:40px;
+    font-weight:800;
+    line-height:1;
+    margin-bottom:15px;
+}
+
+.stat-text{
+    color:#aebac6;
+    font-size:13px;
+}
+
+/* ================= MEDICAL ================= */
+
+.medical-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    margin-top:55px;
+}
+
+.medical-card{
+    background:#091522;
+    border:1px solid var(--line);
+    overflow:hidden;
+    border-radius:8px;
+}
+
+.medical-image{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+}
+
+.medical-body{
+    padding:34px;
+}
+
+.medical-body h3{
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+    margin-bottom:13px;
+}
+
+.medical-body p,
+.medical-body li{
+    color:#aebac6;
+}
+
+.medical-body ul{
+    padding-left:20px;
+    margin-top:15px;
+}
+
+.medical-body li{
+    margin:8px 0;
+}
+
+/* ================= PLAGUE ================= */
+
+.plague{
+    background:
+        linear-gradient(
+            rgba(3,8,14,.84),
+            rgba(3,8,14,.96)
+        ),
+        url("https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=2200&q=85")
+        center/cover;
+}
+
+.plague-box{
+    max-width:900px;
+    margin:auto;
+    padding:60px;
+    background:rgba(4,10,17,.72);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(215,181,109,.28);
+    box-shadow:var(--shadow);
+}
+
+.plague-box h2{
+    font-family:"Playfair Display",serif;
+    font-size:52px;
+    margin-bottom:18px;
+}
+
+.plague-box p{
+    color:#b5c0ca;
+}
+
+/* ================= TOKENS ================= */
+
+.tokens-section{
+    background:#040a11;
+}
+
+.tokens{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+    margin-top:55px;
+}
+
+.token{
+    position:relative;
+    padding:32px 18px;
+    text-align:center;
+    border:1px solid var(--line);
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.018)
+    );
+    border-radius:7px;
+    transition:.3s;
+}
+
+.token:hover{
+    transform:translateY(-8px);
+    border-color:rgba(215,181,109,.55);
+    box-shadow:0 20px 55px rgba(0,0,0,.35);
+}
+  .peace{
+    width:65px;
+    height:65px;
+    margin:0 auto 18px;
+    display:grid;
+    place-items:center;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    color:var(--gold);
+    font-size:27px;
+}
+
+.token h3{
+    font-size:14px;
+    letter-spacing:.08em;
+}
+
+.token p{
+    color:#788695;
+    font-size:11px;
+    margin:8px 0 20px;
+    min-height:38px;
+}
+
+.asset-button{
+    display:inline-block;
+    padding:8px 12px;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:.08em;
+    transition:.2s;
+}
+
+.asset-button:hover{
+    background:var(--gold);
+    color:#071019;
+}
+
+/* ================= BIBLE ================= */
+
+.bible{
+    text-align:center;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(215,181,109,.12),
+            transparent 45%
+        ),
+        #091522;
+}
+
+.verse{
+    max-width:900px;
+    margin:45px auto 0;
+    padding:55px 30px;
+    border-top:1px solid rgba(215,181,109,.35);
+    border-bottom:1px solid rgba(215,181,109,.35);
+}
+
+.verse blockquote{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(25px,4vw,42px);
+    line-height:1.4;
+}
+
+.verse cite{
+    display:block;
+    margin-top:25px;
+    color:var(--gold);
+    font-style:normal;
+}
+
+/* ================= CHRIST ================= */
+
+.christ{
+    text-align:center;
+}
+
+.christ-image{
+    width:min(720px,100%);
+    height:560px;
+    object-fit:cover;
+    margin:45px auto 0;
+    border-radius:8px;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#03070c;
+    border-top:1px solid var(--line);
+    padding:60px 0;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.footer-note{
+    max-width:680px;
+    color:#687686;
+    font-size:11px;
+}
+
+/* ================= RUSSIAN ================= */
+
+.ru{
+    display:none;
+}
+
+body.russian .en{
+    display:none;
+}
+
+body.russian .ru{
+    display:block;
+}
+
+body.russian{
+    direction:rtl;
+}
+
+body.russian .menu,
+body.russian .flags,
+body.russian .brand{
+    direction:ltr;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:950px){
+
+    .menu{
+        display:none;
+    }
+
+    .mission-grid{
+        grid-template-columns:1fr;
+    }
+
+    .tokens{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .footer{
+        flex-direction:column;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .hero h1{
+        font-size:58px;
+    }
+
+    .flags{
+        gap:7px;
+    }
+
+    .flag{
+        width:47px;
+        height:32px;
+    }
+
+    .medical-grid{
+        grid-template-columns:1fr;
+    }
+
+    .tokens{
+        grid-template-columns:1fr;
+    }
+
+    .mission-card,
+    .plague-box{
+        padding:28px;
+    }
+
+    .christ-image{
+        height:430px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+<div class="container nav">
+
+<a class="brand" href="#">
+<span class="brand-symbol">🕊</span>
+<span>OPIUM BIRD</span>
+</a>
+
+<div class="menu">
+<a href="#mission">Mission</a>
+<a href="#medical">Medical</a>
+<a href="#plague">Plague</a>
+<a href="#tokens">Assets</a>
+<a href="#faith">Faith</a>
+</div>
+
+<button class="language" onclick="changeLanguage()">
+RU / EN
+</button>
+
+</div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<header class="hero">
+
+<div class="hero-bg"></div>
+<div class="hero-glow"></div>
+
+<div class="container hero-content">
+
+<div class="kicker">
+Humanity • Medicine • Hope
+</div>
+
+<h1>
+Opium Bird
+</h1>
+
+<div class="hero-question en">
+Is there a path to healing?
+</div>
+
+<div class="hero-question ru">
+Есть ли путь к исцелению?
+</div>
+
+<p class="hero-copy en">
+A humanitarian initiative built on the Stellar network,
+designed to connect technology, transparency and global compassion
+in support of children affected by serious diseases.
+</p>
+
+<p class="hero-copy ru">
+Гуманитарная инициатива на базе сети Stellar,
+созданная для объединения технологий, прозрачности и мировой
+солидарности в поддержку детей, столкнувшихся с тяжёлыми заболеваниями.
+</p>
+
+<div class="flags">
+
+<img class="flag"
+src="https://flagcdn.com/w160/ru.png"
+alt="Russia">
+
+<img class="flag"
+src="https://flagcdn.com/w160/jp.png"
+alt="Japan">
+
+<img class="flag"
+src="https://flagcdn.com/w160/gb.png"
+alt="United Kingdom">
+
+<img class="flag"
+src="https://flagcdn.com/w160/cn.png"
+alt="China">
+
+<img class="flag"
+src="https://flagcdn.com/w160/us.png"
+alt="United States">
+
+</div>
+
+<a class="hero-button" href="#mission">
+ENTER THE MISSION →
+</a>
+
+</div>
+
+</header>
+
+
+<!-- ================= MISSION ================= -->
+
+<section id="mission" class="mission">
+
+<div class="container mission-grid">
+
+<div>
+
+<div class="label">
+Our Mission
+</div>
+
+<h2 class="title">
+Technology should serve humanity.
+</h2>
+
+<p class="subtitle">
+Opium Bird is a humanitarian project concept using the Stellar network
+as a transparent digital infrastructure for international participation,
+awareness and charitable fundraising.
+</p>
+
+</div>
+
+<div class="mission-card">
+
+<p>
+Our purpose is centered around one principle:
+<span class="gold">
+every child deserves a chance.
+</span>
+</p>
+
+<p>
+The initiative is designed to support humanitarian efforts connected
+with children affected by serious and life-changing diseases.
+</p>
+
+<p>
+Stellar technology provides a public and transparent transaction
+environment that can make digital fundraising easier to observe and
+participate in.
+</p>
+
+<p>
+Opium Bird does not diagnose, prescribe treatment or replace medical
+professionals. Medical decisions must always be made by qualified
+healthcare providers.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GLOBAL STATISTICS ================= -->
+
+<section class="stats-section">
+
+<div class="container">
+
+<div class="label">
+Global Health
+</div>
+
+<h2 class="title">
+The childhood cancer challenge.
+</h2>
+
+<p class="subtitle">
+Childhood cancer is a major global health challenge. The availability
+and quality of diagnosis and treatment can dramatically influence a
+child's chance of survival.
+</p>
+
+
+<div class="stats">
+
+<div class="stat">
+
+<div class="stat-number">
+400K
+</div>
+
+<div class="stat-text">
+Estimated children and adolescents aged 0–19 who develop cancer
+each year worldwide.
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+80%+
+</div>
+
+<div class="stat-text">
+More than 80% of children with cancer can be cured in many
+high-income settings where comprehensive care is available.
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+&lt;30%
+</div>
+
+<div class="stat-text">
+In many low- and middle-income countries, fewer than 30% of
+children with cancer are cured.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MEDICAL ================= -->
+
+<section id="medical">
+
+<div class="container">
+
+<div class="label">
+Medical Knowledge
+</div>
+
+<h2 class="title">
+When treatment becomes a matter of access.
+</h2>
+
+<p class="subtitle">
+The objective of medical humanitarian work is not simply to raise
+awareness. It is to help reduce barriers that prevent children from
+receiving timely and appropriate care.
+</p>
+
+
+<div class="medical-grid">
+
+
+<article class="medical-card">
+
+<img
+class="medical-image"
+src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=85"
+alt="Pediatric medical care"
+loading="lazy"
+>
+
+<div class="medical-body">
+
+<h3>
+Childhood Cancer
+</h3>
+
+<p>
+Childhood cancers include several different diseases. Among the
+most common are leukaemias, brain tumours and certain solid tumours.
+</p>
+
+<ul>
+<li>Leukaemias</li>
+<li>Brain and central nervous system tumours</li>
+<li>Lymphomas</li>
+<li>Bone cancers</li>
+<li>Neuroblastoma and Wilms tumour</li>
+</ul>
+
+</div>
+
+</article>
+
+
+<article class="medical-card">
+
+<img
+class="medical-image"
+src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1600&q=85"
+alt="Doctor providing care"
+loading="lazy"
+>
+
+<div class="medical-body">
+
+<h3>
+The Effects of Cancer
+</h3>
+<p>
+Cancer and its treatment can affect a child's physical health,
+development and emotional wellbeing.
+</p>
+
+<ul>
+<li>Fatigue and weakness</li>
+<li>Pain and other disease-related symptoms</li>
+<li>Effects of chemotherapy or radiotherapy</li>
+<li>Nutritional and developmental challenges</li>
+<li>Psychological and social impact on children and families</li>
+</ul>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PLAGUE ================= -->
+
+<section id="plague" class="plague">
+
+<div class="container">
+
+<div class="plague-box">
+
+<div class="label">
+Medical Information
+</div>
+
+<h2>
+Plague
+</h2>
+
+<p>
+Plague is an infectious disease caused by the bacterium
+<strong>Yersinia pestis</strong>.
+</p>
+
+<br>
+
+<p>
+The most common clinical form is bubonic plague. Severe forms include
+pneumonic and septicemic plague.
+</p>
+
+<br>
+
+<p>
+Transmission can occur through infected fleas, direct contact with
+infectious material, and inhalation of respiratory particles in
+pneumonic plague.
+</p>
+
+<br>
+
+<p>
+Modern antibiotics are effective against plague when treatment begins
+promptly. Early diagnosis and medical treatment are therefore critical.
+</p>
+
+<br>
+
+<p class="gold">
+This section is provided for educational purposes and is not medical
+advice.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STELLAR ASSETS ================= -->
+
+<section id="tokens" class="tokens-section">
+
+<div class="container">
+
+<div class="label">
+Stellar Digital Assets
+</div>
+
+<h2 class="title">
+Five names. One humanitarian vision.
+</h2>
+
+<p class="subtitle">
+Each asset represents a humanitarian theme within the Opium Bird
+ecosystem. The peace symbol represents the project's central idea:
+technology should ultimately serve human life.
+</p>
+
+
+<div class="tokens">
+
+
+<!-- PLAGUE -->
+
+<div class="token">
+
+<div class="peace">
+☮
+</div>
+
+<h3>
+PLAGUE
+</h3>
+
+<p>
+Disease awareness
+</p>
+
+<a
+class="asset-button"
+target="_blank"
+href="https://stellar.expert/explorer/public/asset/PLAGUE-GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65">
+STELLAR EXPERT
+</a>
+
+</div>
+
+
+<!-- CANCER -->
+
+<div class="token">
+
+<div class="peace">
+☮
+</div>
+
+<h3>
+CANCER
+</h3>
+
+<p>
+Childhood cancer awareness
+</p>
+
+<a
+class="asset-button"
+target="_blank"
+href="https://stellar.expert/explorer/public/asset/CANCER-GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65">
+STELLAR EXPERT
+</a>
+
+</div>
+
+
+<!-- AUTISM -->
+
+<div class="token">
+
+<div class="peace">
+☮
+</div>
+
+<h3>
+AUTISM
+</h3>
+
+<p>
+Awareness & inclusion
+</p>
+
+<a
+class="asset-button"
+target="_blank"
+href="https://stellar.expert/explorer/public/asset/AUTISM-GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65">
+STELLAR EXPERT
+</a>
+
+</div>
+
+
+<!-- CHILDREN -->
+
+<div class="token">
+
+<div class="peace">
+☮
+</div>
+
+<h3>
+CHILDREN
+</h3>
+
+<p>
+Children's welfare
+</p>
+
+<a
+class="asset-button"
+target="_blank"
+href="https://stellar.expert/explorer/public/asset/CHILDREN-GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65">
+STELLAR EXPERT
+</a>
+
+</div>
+
+
+<!-- OPIUM BIRD -->
+
+<div class="token">
+
+<div class="peace">
+☮
+</div>
+
+<h3>
+OPIUM BIRD
+</h3>
+
+<p>
+Core humanitarian asset
+</p>
+
+<a
+class="asset-button"
+target="_blank"
+href="https://stellar.expert/explorer/public/asset/OPIUM%20BIRD-GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65">
+STELLAR EXPERT
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FAITH ================= -->
+
+<section id="faith" class="bible">
+
+<div class="container">
+
+<div class="label">
+Faith & Compassion
+</div>
+
+<h2 class="title">
+A reminder to do good.
+</h2>
+
+<div class="verse">
+
+<blockquote>
+“And let us not grow weary of doing good,
+for in due season we will reap,
+if we do not give up.”
+</blockquote>
+
+<cite>
+Galatians 6:9
+</cite>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CHRIST ================= -->
+
+<section class="christ">
+  The objective of medical humanitarian work is not simply to raise
+awareness. It is to help reduce barriers that prevent children from
+receiving timely and appropriate care.
+</p>
+
+
+<div class="medical-grid">
+
+
+<article class="medical-card">
+
+<img
+class="medical-image"
+src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=85"
+alt="Pediatric medical care"
+loading="lazy"
+>
+
+<div class="medical-body">
+
+<h3>
+Childhood Cancer
+</h3>
+
+<p>
+Childhood cancers include several different diseases. Among the
+most common are leukaemias, brain tumours and certain solid tumours.
+</p>
+
+<ul>
+<li>Leukaemias</li>
+<li>Brain and central nervous system tumours</li>
+<li>Lymphomas</li>
+<li>Bone cancers</li>
+<li>Neuroblastoma and Wilms tumour</li>
+</ul>
+
+</div>
+
+</article>
+
+
+<article class="medical-card">
+
+<img
+class="medical-image"
+src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1600&q=85"
+alt="Doctor providing care"
+loading="lazy"
+>
+
+<div class="medical-body">
+
+<h3>
+The Effects of Cancer
+</h3>
+
+<p>
+Cancer and its treatment can affect a child's physical health,
+development and emotional wellbeing.
+</p>
+
+<ul>
+  <a
+class="asset-button"
+target="_blank"
+href="https://stellar.expert/explorer/public/asset/OPIUM%20BIRD-GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65">
+STELLAR EXPERT
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FAITH ================= -->
+
+<section id="faith" class="bible">
+
+<div class="container">
+
+<div class="label">
+Faith & Compassion
+</div>
+
+<h2 class="title">
+A reminder to do good.
+</h2>
+
+<div class="verse">
+
+<blockquote>
+“And let us not grow weary of doing good,
+for in due season we will reap,
+if we do not give up.”
+</blockquote>
+
+<cite>
+Galatians 6:9
+</cite>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CHRIST ================= -->
+
+<section class="christ">
+
+class="christ-image" src="https:<div class="container"> <div class="label"> Hope </div> <h2 class="title"> Faith. Compassion. Humanity. </h2> <p class="subtitle" style="margin:auto"> Behind every statistic is a child, a family and a human story. </p> <img//images.unsplash.com/photo-1496449903678-68ddcb189a24?auto=format&fit=crop&w=1800&q=85" alt="Religious artwork depicting Christ" loading="lazy" >
+  <!-- ================= FOOTER ================= --> <footer> <div class="container footer"> <div class="brand"> <span class="brand-symbol">🕊</span> <span>OPIUM BIRD</span> </div> <div class="footer-note"> Opium Bird is a humanitarian initiative concept built on the Stellar network. Information presented on this website is educational and does not constitute medical advice, diagnosis or treatment. Any fundraising or charitable activity should be conducted through an appropriately established and legally compliant structure.
