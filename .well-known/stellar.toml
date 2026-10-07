@@ -19,7 +19,7 @@ desc="PLAGUE is a charitable digital asset created to support fundraising effort
 conditions="Charitable fundraising and humanitarian support."
 display_decimals=7
 is_asset_anchored=false
-image="https://opiumbird-angels.github.io/9b74eea5-2bda-4e19-a79f-c67aaa7210b6.png"
+image="https://opiumbird-angels.github.io/f91e44a2-aefa-45a6-87be-34b431204b7b.png"
 
 [[CURRENCIES]]
 code="CANCER"
@@ -29,7 +29,7 @@ desc="CANCER is a charitable digital asset created to support fundraising effort
 conditions="Charitable fundraising and humanitarian support."
 display_decimals=7
 is_asset_anchored=false
-image="https://opiumbird-angels.github.io/9b74eea5-2bda-4e19-a79f-c67aaa7210b6.png"
+image="https://opiumbird-angels.github.io/f91e44a2-aefa-45a6-87be-34b431204b7b.png"
 
 [[CURRENCIES]]
 code="AUTISM"
@@ -39,7 +39,7 @@ desc="AUTISM is a charitable digital asset created to support fundraising effort
 conditions="Charitable fundraising and humanitarian support."
 display_decimals=7
 is_asset_anchored=false
-image="https://opiumbird-angels.github.io/9b74eea5-2bda-4e19-a79f-c67aaa7210b6.png"
+image="https://opiumbird-angels.github.io/f91e44a2-aefa-45a6-87be-34b431204b7b.png"
 
 [[CURRENCIES]]
 code="CHILDREN"
@@ -49,7 +49,7 @@ desc="CHILDREN is a charitable digital asset created to support humanitarian ass
 conditions="Charitable fundraising and humanitarian support."
 display_decimals=7
 is_asset_anchored=false
-image="https://opiumbird-angels.github.io/9b74eea5-2bda-4e19-a79f-c67aaa7210b6.png"
+image="https://opiumbird-angels.github.io/f91e44a2-aefa-45a6-87be-34b431204b7b.png"
 
 [[CURRENCIES]]
 code="OPIUMBIRD"
@@ -59,4 +59,4 @@ desc="OPIUMBIRD is a digital asset within the Opium Bird project."
 conditions="No specific conditions."
 display_decimals=1
 is_asset_anchored=false
-image="https://opiumbird-angels.github.io/9b74eea5-2bda-4e19-a79f-c67aaa7210b6.png"
+image="https://opiumbird-angels.github.io/f91e44a2-aefa-45a6-87be-34b431204b7b.png"
