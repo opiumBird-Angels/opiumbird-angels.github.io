@@ -2,6 +2,10 @@ VERSION="2.0.0"
 
 NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
 
+ACCOUNTS=[
+"GCORGDIQF2O42CE3XEGHX3AEH5ZZ3ZSBAHOFBG6S4RZCKKP54J6AIX65"
+]
+
 [DOCUMENTATION]
 ORG_NAME="Opium Bird"
 ORG_URL="https://opiumbird-angels.github.io/"
